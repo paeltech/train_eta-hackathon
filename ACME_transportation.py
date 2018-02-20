@@ -25,7 +25,7 @@ def data_check(reader):
 
 def power_check(reader):
     for line in reader:
-        if line["power_supply"] > 0.995 or line["power_supply == 1"]:
+        if line["power_supply"] < 0.995 or line["power_supply"] > 1:
             #write the error to file
             print ("There is power fluctuation at {}", format(line))
 
